@@ -35,6 +35,10 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space)){
 
+            //launch a projectile from the player
+            //Instancia um objeto projectilePrefab, seguido de sua posição inicial, e a rotação desejada
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation); 
+
         }
         
         horizontalInput = Input.GetAxis("Horizontal");
