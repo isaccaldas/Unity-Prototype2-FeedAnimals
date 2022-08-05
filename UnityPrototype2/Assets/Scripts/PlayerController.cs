@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //Não deixa o personagem
         if(transform.position.x < -xRange){
 
             // A posiçao atual do player recebera esse novo Vector3
@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour
 
         }
 
+        if(Input.GetKeyDown(KeyCode.Space)){
+
+        }
+        
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * speed *  Time.deltaTime);
     }
