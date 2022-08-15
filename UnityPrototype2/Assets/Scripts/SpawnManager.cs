@@ -10,19 +10,26 @@ public class SpawnManager : MonoBehaviour
     private float yPosition = 0;
     private float zPosition = 20;
 
+    float startDelay = 2;
+
+    float interval = 1.5f;
+
     // Start is called before the first frame update
     void Start()
     {
+        InvokeRepeating("SpawnRandomAnimal",startDelay,interval);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.S)){
+
+        // Gera um animal aleatório ao apertar a tecla s no teclado.
+        /*if(Input.GetKeyDown(KeyCode.S)){
             
             SpawnRandomAnimal(); 
-        }   
+        } */  
     }
 
 
