@@ -21,6 +21,12 @@ public class SpawnManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.S)){
             
+            SpawnRandomAnimal(); 
+        }   
+    }
+
+
+    void SpawnRandomAnimal() {
             // A variável animalIndex recebe um valor aleatório de zero ao tamanho máximo do array.
             int animalIndex = Random.Range(0,animalPrefabs.Length);
 
@@ -36,6 +42,5 @@ public class SpawnManager : MonoBehaviour
             
             Instantiate(animalPrefabs[animalIndex], spawPosition, 
             animalPrefabs[animalIndex].transform.rotation);
-        }   
-    }
+    } 
 }
